@@ -19,7 +19,7 @@ public class DatabaseManager {
 
     public void showAllThings(){
 
-        System.out.println(business1.calculateSomething());
-        System.out.println(business2.calculateSomething());
+        System.out.println("Dao1 Value: " + business1.calculateSomething());
+        System.out.println("Dao2 Value: " + business2.calculateSomething());
     }
 }
