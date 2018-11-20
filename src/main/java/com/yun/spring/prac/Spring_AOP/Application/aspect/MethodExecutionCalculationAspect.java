@@ -20,7 +20,7 @@ public class MethodExecutionCalculationAspect {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Around(value = "com.yun.spring.prac.Spring_AOP.Application.aspect.CommonJoinPointConfig.businessLayerExecution()")
+    @Around(value = "com.yun.spring.prac.Spring_AOP.Application.aspect.CommonJoinPointConfig.trackTimeAnnotation()")
     public void around(ProceedingJoinPoint joinPoint) throws Throwable {
 
         long startTime = System.currentTimeMillis(); // Intercepted
@@ -32,6 +32,6 @@ public class MethodExecutionCalculationAspect {
         // allow execution of method
         // end Time = y
 
-        logger.info("Time Taken by {} is {}", joinPoint, timeTaken);
+        logger.info("Time Taken by {} is {}ms", joinPoint, timeTaken);
     }
 }
