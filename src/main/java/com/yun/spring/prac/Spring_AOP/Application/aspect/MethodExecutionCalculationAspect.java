@@ -20,7 +20,7 @@ public class MethodExecutionCalculationAspect {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Around(value = "execution(* com.yun.spring.prac.Spring_AOP.Application.business.*.*(..))")
+    @Around(value = "com.yun.spring.prac.Spring_AOP.Application.aspect.CommonJoinPointConfig.businessLayerExecution()")
     public void around(ProceedingJoinPoint joinPoint) throws Throwable {
 
         long startTime = System.currentTimeMillis(); // Intercepted

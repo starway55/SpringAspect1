@@ -25,7 +25,7 @@ public class UserAccessAspect {
 
 
 //    @Before("execution(* com.yun.spring.prac.Spring_AOP.Application..*.*(..))") // intercept every call in this package
-    @Before("execution(* com.yun.spring.prac.Spring_AOP.Application.data.*.*(..))") // This is a point cut
+    @Before("com.yun.spring.prac.Spring_AOP.Application.aspect.CommonJoinPointConfig.dataLayerExecution())") // This is a point cut
     public void before(JoinPoint joinPoint){ // A join point is a specific interception of a method call. An instance of an interception
 
         logger.info(" Check for user access "); // this is an advice. What do you want to do for a point cut

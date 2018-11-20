@@ -22,7 +22,7 @@ public class UserAfterAccessAspect {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @AfterReturning(
-            value="execution(* com.yun.spring.prac.Spring_AOP.Application.business.*.*(..))",
+            value="com.yun.spring.prac.Spring_AOP.Application.aspect.CommonJoinPointConfig.businessLayerExecution()",
             returning="result"
     )
     public void afterReturning(JoinPoint joinPoint, Object result){
@@ -32,7 +32,7 @@ public class UserAfterAccessAspect {
 
     @AfterThrowing(
 
-            value = "execution(* com.yun.spring.prac.Spring_AOP.Application.business.*.*(..))",
+            value = "com.yun.spring.prac.Spring_AOP.Application.aspect.CommonJoinPointConfig.businessLayerExecution()",
             throwing = "exception"
     )
     public void afterThrowing(JoinPoint joinPoint, Exception exception){
@@ -42,7 +42,7 @@ public class UserAfterAccessAspect {
 
     @After(
 
-            value = "execution(* com.yun.spring.prac.Spring_AOP.Application.business.*.*(..))"
+            value = "com.yun.spring.prac.Spring_AOP.Application.aspect.CommonJoinPointConfig.businessLayerExecution()"
     )
     public void after(JoinPoint joinPoint){
 
